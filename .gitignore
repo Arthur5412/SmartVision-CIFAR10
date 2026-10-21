@@ -1,0 +1,67 @@
+
+# ==========================================
+# SmartVision-CIFAR10 Git Ignore
+# ==========================================
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Google Colab temporary files
+/content/
+sample_data/
+
+# Downloaded CIFAR-10 datasets
+data/
+cifar-10-batches-py/
+cifar-10-python.tar.gz
+
+# Downloaded training and testing images
+SmartVision_Training_Images/
+SmartVision_Validation_Images/
+SmartVision_Test_Images/
+
+# Compressed dataset archives
+SmartVision_Training_Images.zip
+SmartVision_Validation_Images.zip
+SmartVision_Test_Images.zip
+
+# Deployment ZIP archive
+SmartVision_Deployment.zip
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE settings
+.vscode/
+.idea/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Temporary files and logs
+*.log
+*.tmp
+*.bak
+
+# ==========================================
+# IMPORTANT: Keep trained model weights
+# ==========================================
+
+# Do not ignore .pth model files.
+# SmartVision needs its saved model weights.
