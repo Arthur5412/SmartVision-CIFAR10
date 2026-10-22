@@ -2,7 +2,7 @@
 
 An end-to-end **image classification** project built with **PyTorch**, **Torchvision**, and **Gradio**. SmartVision trains a compact TinyVGG-style convolutional neural network (CNN) to recognize ten object categories in CIFAR-10 images and provides an interactive web interface for single-image predictions.
 
-> **Project status:** Model training, evaluation, and local Gradio testing completed. Hugging Face Spaces deployment is being prepared.
+> **Project status:** Training, evaluation, GitHub publication, and Hugging Face Spaces deployment completed. The live Gradio application has been tested with an uploaded image.
 
 ## Project overview
 
@@ -108,7 +108,15 @@ The Gradio interface lets users:
 
 For example, one test in the Colab-hosted Gradio interface predicted **automobile** with approximately **90%** probability. The displayed processing time for that run was approximately **0.00193 seconds**. Timing varies by hardware and runtime conditions; this is an example, not a guaranteed benchmark.
 
-The standalone deployment application is configured to run on **CPU**, so it does not require a GPU on Hugging Face Spaces.
+The standalone deployment application runs on **CPU**, so it does not require a GPU on Hugging Face Spaces.
+
+### Verified live demo
+
+The deployed app correctly classified an uploaded airplane photograph. Its three highest displayed predictions were **airplane (67%)**, **ship (27%)**, and **bird (1%)**; reported prediction time was approximately **0.00335 seconds**. These results describe one demonstration image, not aggregate model accuracy.
+
+![SmartVision Hugging Face Gradio demo showing an airplane prediction](docs/images/smartvision-live-demo.png)
+
+**[Try the live SmartVision application](https://huggingface.co/spaces/Arthur5412/SmartVision-CIFAR10)**
 
 ## Repository structure
 
@@ -122,6 +130,9 @@ SmartVision-CIFAR10/
 │   ├── smartvision_best_model.pth   # Saved trained model weights
 │   ├── requirements.txt             # Runtime dependencies
 │   └── README.md                    # Hugging Face Spaces configuration
+├── docs/
+│   └── images/
+│       └── smartvision-live-demo.png  # Screenshot of deployed Gradio app
 ├── .gitignore
 └── README.md                        # This project overview
 ```
@@ -151,9 +162,9 @@ To reproduce training and evaluation, open the notebook in Google Colab and exec
 
 ## Deployment
 
-The standalone Gradio application is prepared for **Hugging Face Spaces**. The Space repository should contain the **contents** of `SmartVision_Deployment/` at its root, including its own `README.md` with the Spaces metadata.
+The standalone Gradio application is **deployed and running on Hugging Face Spaces** using CPU Basic. The Space repository contains the **contents** of `SmartVision_Deployment/` at its root, including its own `README.md` with Spaces metadata.
 
-**Live demo:** Link will be added after deployment.
+**Live demo:** https://huggingface.co/spaces/Arthur5412/SmartVision-CIFAR10
 
 **Source repository:** https://github.com/Arthur5412/SmartVision-CIFAR10
 
